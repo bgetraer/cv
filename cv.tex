@@ -1,0 +1,412 @@
+\documentclass[12pt]{article}
+
+% Latex template for CV.
+% Original template created September 2005 by Bradley C. Kuszmaul.
+% Edited May 2021 by Benjamin Getraer (benjamingetraer@gmail.com)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACKAGE IMPORTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref}
+
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage[dvips]{epsfig}
+\usepackage{longtable}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% general commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\myname}{Benjamin Getraer}
+\newcommand{\myemail}{benjamingetraer@gmail.com}
+\newcommand{\myphone}{(732) 673-8496}
+
+\newcommand{\pton}{Princeton University}
+\newcommand{\geo}{Department of Geosciences}
+\newcommand{\prd}{Princeton Research Day}
+
+\newcommand{\fieldsofinterest}{
+% Principal fields of interest
+\begin{tabbing}
+Computational geoscience\\
+Ecosystem resiliency\\
+Cryosphere response to global warming\\
+
+\end{tabbing}
+}
+
+\newcommand{\professionalstatement}{
+I am an intellectually adventurous student of life, with a passion for doing things \emph{right}. Broadly, my interests lie along the intersections of quantitative and computational Earth science and ecology, Wilderness conservation and field work, and leadership, mentorship, and education.
+ 
+ I have strong analytical skills and an academic background in scientific research, including scientific writing and communication, with a Bachelor’s degree from Princeton University's Department of Geosciences. I am motivated by collaborative learning and discovery, geologically inspired existentialism, and the irrepressible desire to challenge myself in new ways --- and inspired by public service and social and environmental justice.  
+
+ My research interests are in developing and executing interdisciplinary research projects combining field work with computational modeling and analysis to understand the connections between ecosystems, climate, and the ocean and cryosphere. I am especially interested in studying the effects of climate change on coastal and tundra ecosystems.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% document formatting commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\pushright}[1]{\begin{tabular}{ll}\mbox{ }&#1\end{tabular}}
+\newcommand{\littlenote}[1]{\emph{\footnotesize #1}}
+\newcommand{\standardtwotab}[1]{
+\noindent
+{\small
+\begin{longtable}{p{3.6in}p{1.6in}}
+#1
+\end{longtable}
+}
+}
+\newcommand{\standardthreetab}[1]{
+\noindent
+\hspace{-0.4in}
+{\small
+\begin{longtable}{>{\raggedright}p{4.0in}p{.9in}p{.9in}}
+#1
+\end{longtable}
+}
+}
+\newcommand{\horline}{
+\noindent\makebox[\linewidth]{\rule{0.8\paperwidth}{0.4pt}}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% section commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nameheading}{
+\begin{center}
+{\LARGE\textbf{{\myname}}}\\[2ex]
+\href{mailto:\myemail}{\myemail} $\cdot$ \myphone \\[2ex]
+\horline
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% degree
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\degree}{
+\pton{}, \geo{}\\ Bachelor of Arts and Sciences \emph{cum laude}, Class of 2019\\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\awardsreceived}{
+% 2-column tabular.
+Sigma Xi Book Award, June 2019 \\
+\pushright{\littlenote{for outstanding research ability and clear writing in the senior thesis}} \\
+Nomination to the Princeton chapter of the Sigma Xi honor society, June 2019
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% independent research
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SeniorThesis}{\href{http://arks.princeton.edu/ark:/88435/dsp01gh93h234p}{Comparison of GRACE derived Greenland mass wasting to near surface temperature from MERRA-2 reanalysis}}
+\newcommand{\JPfall}{Resolving and contextualizing the signal of Greenland ice loss 2014--2017}
+\newcommand{\JPspring}{Regional Forcing of Greenland Ice Loss 2002--2017}
+\newcommand{\SophPaper}{Topography-based modeling of Utah snowpack from telemetry data}
+
+\newcommand{\research}{
+
+2019 & \SeniorThesis\\
+& \littlenote{senior thesis, presented as a 15 minute talk to the \geo{}} \\
+
+2018 & \JPspring\\
+& \littlenote{junior paper, presented as a scientific poster to the \geo{}}\\
+
+2018 & \JPfall\\
+& \littlenote{junior paper, presented as a scientific poster to the \geo{} and at \prd{}}\\
+
+2017 & \SophPaper \\
+& \littlenote{presented as a 10 minute talk to the \geo{} and at \prd{}} \\
+
+\multicolumn{2}{l}{\littlenote{code for senior thesis and junior papers can be found at \href{https://github.com/bgetraer/slepian_bgetraer}{github.com/bgetraer/slepian\_bgetraer}}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% academic advisers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fjs}{\href{https://fjsimons.princeton.edu}{Frederik J. Simons}}
+\newcommand{\resplandy}{\href{https://resplandy.princeton.edu}{Laure Resplandy}}
+\newcommand{\frog}{\href{https://odoc.princeton.edu/about/who/amanda-irwin-wilkins}{Amanda Irwin Wilkins}}
+\newcommand{\ralf}{\href{https://maloof.princeton.edu/}{Adam C. Maloof}}
+
+\newcommand{\advisers}{
+\resplandy  & Assistant Professor of Geosciences & \littlenote{senior thesis adviser}\\
+\fjs    & Professor of Geosciences & \littlenote{junior paper adviser}\\
+\frog   & Writing Program Director\\
+\ralf   & Professor of Geosciences\\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% field research
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fieldresearch}{
+Year & Course \\\hline
+
+2018 & Sedimentology \littlenote{(\pton{} course, 10 day field trip)} \\
+& \littlenote{Quantitative characterization of depth and orientation patterns in active stromatolite reefs using ground-truthed UAV imagery classification in Hamelin Pool Shark Bay, Australia, leading to a 10 minute presentation to the \geo{}} \\
+
+2017 & Juneau Icefield Research Program \littlenote{(8 week summer field course)}\\
+& \littlenote{Glaciological field course on the Juneau Icefield, Alaska and British Columbia; continuation of the longest glacial mass-balance studies in North America on the Taku and Lemon Creek Glaciers, with public presentations of research in Atlin, BC and Juneau, AK}\\
+
+2017 & Metamorphic and Igneous Petrology \littlenote{(\pton{} course, 7 day field trip)}\\
+ & \littlenote{Support for the independent-magma-bodies hypothesis for the Bishop Tuff formation by pumice clast size distributions and handheld XRF and magnetometer measurements in Long Valley Caldera, CA, presented as a poster to the \geo{}} \\
+
+2016 & Measuring Climate Change: Methods in Data Analysis and Scientific Writing \littlenote{(\pton{} course, 7 day field trip)} \\
+ & \littlenote{Independent development of research questions and data collection objectives and selection of field sites by each student, at a variety of sites across Utah, leading to a term paper and 10 minute presentation of work to the \geo{}} \\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% other courses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\othercourses}{
+
+\noindent\textbf{Geosciences} \\
+\begin{tabular}{l}
+Introduction to Oceanography\\
+Ocean Physics for Climate\\
+Data, Models, and Uncertainty in the Natural Sciences\\
+Global Geophysics\\
+Computational Geophysics\\
+\end{tabular}
+
+\noindent\textbf{Ecology} \\
+\begin{tabular}{l}
+Biodiversity and Species Interactions\\
+Theoretical Ecology\\
+\end{tabular}
+
+\noindent\textbf{Mathematics and Computer Science}\\
+\begin{tabular}{l}
+Multivariable Calculus\\
+Linear Algebra\\
+Differential Equations\\
+Algorithms and Data Structures\\
+\end{tabular}
+
+\noindent\textbf{Other}\\
+\begin{tabular}{l}
+Integrated Science Curriculum\\
+\hspace{0.05\linewidth}\littlenote{mathematically-structured introduction to physics, biology, chemistry, and computer science}
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Work experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\worksummary}{
+\noindent My professional experience spans years in the non-profit and federal sectors of resource and land management and outdoor recreation. I am experienced in public speaking and interpretative presentation, customer service, managing complex interpersonal dynamics in extreme contexts, small team leadership (including 18 weeklong small-group trips for teens and young adults), and situational risk management. I have experience working in large teams as well as in isolating environments where my work was largely self-supported.}
+\newcommand{\usfs}{United States Forest Service}
+\newcommand{\tableA}{p{0.94\linewidth}}
+\newcommand{\tableB}{lp{0.85\linewidth}}
+\newcommand{\tableC}{lp{0.775\linewidth}}
+
+
+\newcommand{\work}{
+
+% Frederik
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2021-- & \textsc{Online Course Development} \littlenote{self-employed contractor}\\
+& \begin{tabular}{\tableA}
+   Video editing for The Simons Laboratories at \pton\\
+   \littlenote{\href{https://registrar.princeton.edu/course-offerings/course-details?courseid=010251\&term=1202}{400-level course in statistics and modeling}, 36 hours of footage}
+\end{tabular}\\\\
+
+% AmeriCorps
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2020--2021 & \textsc{Safe Passages AmeriCorps Elev8 Program}\\
+& \begin{tabular}{\tableA}
+   4--5 grade Education Intervention Specialist, Emeryville CA\\
+   \littlenote{Worked directly with high-need students 2--4 years behind grade level in an in-person COVID learning hub in the Emeryville United School District; Emphasis on flexibility, patience, responsible management of stressful situations}
+\end{tabular}\\\\
+
+% USFS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2018--2020  & \textsc{\usfs{}} \littlenote{spring/summer seasonal}\\
+& \begin{tabular}{\tableB}
+  2020        & Wilderness Ranger, San Juan National Forest, CO\\
+              & \littlenote{Patrolled Weminuche and Hermosa Creek Wilderness Areas; Cleared over 500 blow downs from Wilderness trails; Conducted public contacts and compliance checks; Tracked trail useage and rehabilitated Wilderness sites as necessary}\\
+  2019        & Wilderness Ranger, Salmon-Challis National Forest, ID\\
+              & \littlenote{Operated remote guard stations in the Frank Church Wilderness; Managed white-water launches on the Middle Fork of the Salmon River; Interfaced with members of the public and private outfitter and guide operations in interpretative, compliance, and administrative based roles}\\
+
+  2018        & Pathways Recreation Intern, Eldorado National Forest, CA\\
+              & \littlenote{Maintenained developed recreational sites and water systems; Wrote scripts for ESRI suite GIS applications to organize and process trail and road condition data; Assisted in signage design and fabrication, wildlife surveys, and trail work}\\
+\end{tabular}\\\\
+
+% RMC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2019--2020  & \textsc{Randolph Mountain Club} \littlenote{fall/winter seasonal}\\
+& \begin{tabular}{\tableA}
+  Winter backcountry caretaker, Northern Presidential Range, NH\\
+   \littlenote{Self-supported management of backcountry shelters in the White Mountain National Forest from September--March in an isolated alpine environment; Communicated with public visitors, conducted facility maintenance, charged overnight fees for facility use}\\
+  Snowpack data collection volunteer, USFS Snow Ranger Program\\
+   \littlenote{Took daily measurements of snowpack depth and density, snowfall characteristics, and weather information for the White Mountain National Forest and Mt. Washington Avalanche Center snow research and avalanche forecasting programs}\\
+\end{tabular}\\\\
+
+% OA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2017--2019  & \textsc{Princeton Outdoor Action Program}\\
+& \begin{tabular}{\tableC}
+  2017--2019 & Orientation backpacking trip leader\\
+  & \littlenote{Led two week-long orientation trips for incoming students; Focus on mentorship, communication, and managing group dynamics}\\
+  \end{tabular}\\
+  & \begin{tabular}{\tableC}
+  2018--2019 & CPR/Wilderness First Aid instructor \\
+  & \littlenote{BLS level CPR/AED instructor certified through LifeForceUSA, Inc. and the American Heart Association (20 hrs); Instructed Wilderness First Aid courses through Princeton Outdoor Action and the Emergency Care and Safety Institute (60 hrs)}\\
+  \end{tabular}\\
+  & \begin{tabular}{\tableC}
+  2018--2019 & Leader Trainer \\
+  &  \littlenote{Taught outdoor leadership skills and led two week-long instructional backpacking trips for new leaders-in-training; Evaluated and helped select future trip leaders; Participated in weekly committee guiding the direction of the program; Extensive work on constructive feedback, effective student engagement, and developing communication and decision making strategies}
+\end{tabular}\\\\
+
+% GIRI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2017  & \textsc{Princeton Grinder Lab}\\
+& \begin{tabular}{\tableA}
+  Lab technician for the Maloof Research Group\\
+  \littlenote{Designed microprocessor-based robotics for \href{https://giri.princeton.edu}{GIRI} using the Arduino platform; Assisted in measuring \emph{Cloudina} fossils for \href{https://doi.org/10.1073/pnas.1719911115}{lab research}}\\
+\end{tabular}\\\\
+
+% AMC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2012--2016  & \textsc{Appalachian Mountain Club}\\
+& \begin{tabular}{\tableC}
+  2016  & Teen trail crew leader, NY/NJ region\\
+        & \littlenote{Led 12 weeklong teen volunteer crews ages 14- 17 in Delaware Water Gap National Recreation Area, NJ, and Harriman State Park, NY; Constructed rock and timber trail features and cleared a new 2.1 mile trail at the AMC Harriman Outdoors Center}\\
+  2012--2015 & Trail crew volunteer, NH, ME, \& NJ \\
+        & \littlenote{Volunteered on two weeklong trail crews and one four week leadership crew in the White Mountain National Forest; Led one teen trail crew as a volunteer leader in the Delaware Water Gap National Recreation Area}\\
+\end{tabular}
+}
+
+\newcommand{\certifications}{
+Wilderness First Responder & Wilderness Medical Associates & 2016-- (Jan. 2022)\\
+AIARE L1 avalanche training & International Mountain Climbing School & 2019\\
+Belay training & Princeton Outdoor Action & 2019 \\
+Radio communications & \usfs{} & 2018, 2019, 2020 \\
+Type-II Wildland Firefighter & \usfs{} & 2020 \\
+Class-B bucking sawyer & \usfs{} & 2020 \\
+Fixed-wing flight manager & \usfs{} & 2019 \\
+Fee collection officer & \usfs{} & 2019 \\
+BLS level CPR/AED instructor & American Heart Association & 2018--2020 \littlenote{expired} \\
+% Wilderness First Aid & SOLO & 2014--2016 \littlenote{expired} \\
+}
+
+\newcommand{\training}{
+% Leadership training
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% setup footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{
+\center{\thepage/\pageref*{LastPage}}
+}
+
+\begin{document}
+\special{papersize=8.5in,11in}%Tell dvips to generate letter paper (not the default, which is a4 on many systems
+
+% Heading with name, contact info on top
+\nameheading
+
+% \noindent{\textbf{\MakeUppercase{Professional Statement}}}
+
+\professionalstatement\\
+
+% Education section
+\noindent{\textbf{\MakeUppercase{Education}}}
+
+% Degree info
+\noindent \textsc{Degree}:
+
+\pushright{
+\begin{tabular}{ll}
+\degree
+\end{tabular}
+}\\
+
+% Awards info
+\noindent \textsc{Awards}:
+
+\pushright{
+\begin{tabular}{ll}
+\awardsreceived
+\end{tabular}
+}\\
+
+\noindent \textsc{Undergraduate summary}:
+
+Sought out challenging interdisciplinary coursework, including courses in geology, theoretical ecology, computer science, ocean physics, computational geophysics, and scientific writing. Submitted three independent research papers to the \geo, including a senior thesis, on the mass wasting of the Greenland ice sheet, working on data reduction methods for global spherical harmonics and comparing the gravimetric signal of mass loss to environmental forcings from climate model reanalysis.
+
+Extensive experience working with MatLab, Java, ArcGIS, \LaTeX. Additional experience working with R, python, github. Some exposure to C, Fortran.\\
+
+% independent research
+\noindent \textsc{Independent Research Papers}:
+
+
+\begin{longtable}{p{0.05\linewidth} p{0.85\linewidth}}
+\research
+\end{longtable}
+\\
+
+% advisers
+\noindent \textsc{\pton{} Faculty Advisers}:
+
+\pushright{
+\begin{tabular}{l l l}
+\advisers
+\end{tabular}
+}\\
+
+% Undergraduate work section
+% \newpage
+% \noindent{\textbf{\MakeUppercase{Undergraduate Work}}}
+
+% field research
+\noindent \textsc{Field Research Experience}:
+
+\begin{tabular}{p{0.05\linewidth} p{0.85\linewidth}}
+\fieldresearch
+\end{tabular}\\
+
+% other courses
+\noindent \textsc{Additional relevant coursework}:
+
+\othercourses\\\\
+
+% Work section
+% \newpage
+\noindent{\textbf{\MakeUppercase{Work Experience}}}\\
+\worksummary
+
+\begin{longtable}{p{0.12\linewidth} p{0.85\linewidth}}
+\work
+\end{longtable}
+
+\noindent{\textbf{\MakeUppercase{Certifications}}}
+
+\begin{longtable}{lll}
+\certifications
+\end{longtable}
+
+
+\end{document}
