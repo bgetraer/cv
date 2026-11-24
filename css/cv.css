@@ -1,0 +1,86 @@
+/* CV styles. Every rule is scoped under .cv so it cannot leak into the
+   rest of your template. */
+
+.cv {
+	--cv-green: #18181b;
+	--cv-muted: #5b6560;
+	--cv-serif: 'Bell', serif;
+
+	width: 100%;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+
+.cv a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.cv a:hover { color: var(--cv-green); }
+
+/* header */
+/*
+.cv .cv-header { text-align: center; margin-bottom: 1.5rem; }
+.cv .cv-name {
+	margin: 0 0 .5rem;
+	font: 500 2.2rem/1.15 var(--cv-serif);
+	color: var(--cv-green);
+}
+.cv .cv-header p { margin: 0; }
+*/
+
+/* section headings: title, then a rule filling the rest of the line */
+.cv h2 {
+	display: flex;
+	align-items: center;
+	gap: .6rem;
+	margin: 2.2rem 0 1rem;
+	padding: 0 0 0.5rem;
+	font: 600 2rem/1.2 var(--cv-serif);
+	color: var(--cv-green);
+	border-bottom: 1px solid var(--cv-green);
+}
+
+.cv h3 {
+	margin: 1.2rem 0 .5rem;
+	padding: 0 0 0.5rem;
+	font-family: var(--cv-serif);
+	font-size: 1.5rem;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 1.2;
+	color: var(--cv-green);
+}
+
+/* two-column tables: date | content.
+   Borders, backgrounds and striping are reset because site CSS often styles td. */
+.cv table.cv-table {
+	width: 100% !important;
+	border-collapse: collapse;
+	table-layout: fixed !important;
+	margin: 0;
+	background: none;
+	border: 0;
+}
+.cv table.cv-table td {
+	padding: 0 1rem .75rem 0;
+	vertical-align: top;
+	border: 0;
+	background: none;
+	overflow-wrap: anywhere;
+}
+.cv table.cv-table tr { background: none; border: 0; }
+.cv .cv-desc { font-size: 1.2rem; font-style: italic; color: var(--cv-muted); }
+
+/* numbered publications, counting down */
+.cv ol.cv-pubs { margin: 0 0 1rem; padding-left: 2.2rem; }
+.cv ol.cv-pubs li { margin-bottom: .6rem; padding-left: .3rem; }
+.cv .cv-note { font-style: italic; color: var(--cv-muted); }
+
+@media (max-width: 600px) {
+	.cv table.cv-table, .cv table.cv-table tbody, .cv table.cv-table tr,
+	.cv table.cv-table td { display: block; width: 100%; }
+	.cv table.cv-table td { padding-right: 0; }
+	.cv table.cv-table td.cv-date { width: 100%; font-weight: 600; padding-bottom: 0; }
+}
+
+@media print {
+	.cv { max-width: none; }
+	.cv tr, .cv li { break-inside: avoid; }
+}
