@@ -1,4 +1,4 @@
-html
-!html/.gitkeep
-latex
-!latex/.gitkeep
+html/*
+!.gitkeep
+latex/*
+!.gitkeep
