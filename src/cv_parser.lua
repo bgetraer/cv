@@ -22,9 +22,10 @@ local M = {}
 local data = {}
 local sections_by_id = {}
 local debug = false
+short_cv = false
 
 -- function to load data
-function M.loadJSON(filename)
+function M.loadJSON(filename,short)
 	local f = assert(io.open(filename, "r"))
 	local s = f:read("*a")
 	f:close()
@@ -32,9 +33,20 @@ function M.loadJSON(filename)
 
 	-- create lookup table
 	if debug then print("-- Sections Found:") end
-	for _, section in ipairs(data.sections) do
-		sections_by_id[section.id] = section
-		if debug then print(section.id) end
+	for _, s in ipairs(data.sections) do
+		if short then
+			short_cv = true
+			local kept = {}
+			for _, item in ipairs(s.data) do
+				if not item.long_only then kept[#kept + 1] = item end
+			end
+			if (s.id == 'conferences' or s.id == 'fieldwork') then
+				s.heading = "Selected " .. s.heading
+			end
+			s.data = kept
+		end
+		sections_by_id[s.id] = s
+		if debug then print(s.id) end
 	end
 end
 
@@ -127,7 +139,7 @@ function M.renderSection(sectionID)
 	-- Education 
 	----------------------------------------------------------------
 	if section.id=='education' then
-		tex.print('\\begin{tabularx}{\\textwidth}{@{}D X@{}}')
+		tex.print('\\begin{tabularx}{\\textwidth}{@{}L X@{}}')
 		for i, item in ipairs(section.data) do
 			tex.sprint('\\education')
 			sprintArg(item.date)
@@ -144,7 +156,7 @@ function M.renderSection(sectionID)
 	-- Professional experience
 	----------------------------------------------------------------
 	elseif section.id == 'professional' then
-		tex.print('\\begin{tabularx}{\\textwidth}{@{}D X@{}}')
+		tex.print('\\begin{tabularx}{\\textwidth}{@{}L X@{}}')
 		for _, c in ipairs(section.data) do
 			tex.sprint('\\professional')
 			sprintArg(c.role)
@@ -182,7 +194,7 @@ function M.renderSection(sectionID)
 					tex.sprint('\\publication')
 					sprintArg(count .. '.')
 					sprintAuthors(p.authors, 6)
-					sprintArg(p.year)
+					sprintArg(p.year ~= "20xx" and p.year or "")
 					sprintRaw(p.title)
 					sprintArg(p.journal)
 					tex.sprint('{'); tex.sprint(-2, p.link or ''); tex.sprint('}')  -- URL stays literal
@@ -264,7 +276,7 @@ function M.renderSection(sectionID)
 		-- Professional Activities
 		------------------------------------------------------------------
 	elseif section.id == 'professionalActivities' then
-		tex.print('\\begin{tabularx}{\\textwidth}{@{}D X@{}}')
+		tex.print('\\begin{tabularx}{\\textwidth}{@{}L X@{}}')
 		for _, c in ipairs(section.data) do
 			tex.sprint('\\professionalactivity')
 			sprintArg(c.role)
@@ -276,7 +288,7 @@ function M.renderSection(sectionID)
 		-- University and Professional Service
 		------------------------------------------------------------------
 	elseif section.id == 'service' then
-		tex.print('\\begin{tabularx}{\\textwidth}{@{}D X@{}}')
+		tex.print('\\begin{tabularx}{\\textwidth}{@{}L X@{}}')
 		for _, c in ipairs(section.data) do
 			tex.sprint('\\service')
 			sprintArg(c.date)

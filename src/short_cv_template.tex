@@ -1,0 +1,172 @@
+\documentclass[letterpaper, 10pt]{article}
+
+\providecommand{\parserfile}{"src/cv_parser"}
+\providecommand{\datafile}{"data/cv_data.json"}
+\providecommand{\fontdir}{"fonts/"}
+\directlua{
+M = require(\parserfile)
+M.loadJSON(\datafile,true)
+}
+
+\usepackage[letterpaper, margin=0.75in]{geometry}
+\usepackage{needspace}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{hyperref} 
+\hypersetup{colorlinks, urlcolor=black}
+\urlstyle{same}
+\usepackage{xcolor}
+\definecolor{DartmouthGreen}{HTML}{00693E}
+\usepackage{array}
+\usepackage[]{ltablex}
+\usepackage{makecell}
+\renewcommand{\cellalign}{tl}
+\usepackage{etoolbox}
+
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+
+
+\usepackage{fontspec}
+% Dartmouth Ruzicka
+\newfontfamily\Ruzicka[
+    Path = \fontdir,
+    Extension = .ttf,
+    UprightFont = DartmouthRuzicka-Regular,
+    BoldFont = DartmouthRuzicka-Semibold,
+    ItalicFont = DartmouthRuzicka-Italic,
+    BoldItalicFont = DartmouthRuzicka-SemiboldItalic
+]{DartmouthRuzicka-Regular}
+
+% National 2
+\setmainfont[
+    Path = \fontdir,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    BoldFont = *-Medium,
+    ItalicFont = *-RegularItalic,
+    BoldItalicFont = *-MediumItalic
+]{National2}
+
+% HEADER
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Benjamin Getraer}
+\rhead{\textit{Curriculum Vitae, \thepage\ of \pageref*{LastPage}}}
+\cfoot{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section functions
+% arguments are parsed and passed by methods within cv_parser.lua
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIO
+\newcommand{\cvbio}[7]{% \cvbio(name, department, institution, address, email, website_link, website_text)
+\noindent
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+  {\Ruzicka
+   {\textcolor{DartmouthGreen}{\LARGE #1}}
+   } 
+	&\makecell[{{>{\raggedleft\arraybackslash}p{\hsize}}}]{ 
+	#2 | #3\\
+	\href{mailto:#5}{#5} | \href{#6}{#7}
+	}
+\end{tabularx}
+}
+
+% HEADINGS
+\newcommand{\headings}[1]{%
+	\Needspace{6\baselineskip}
+  \par\vspace{10pt}\noindent
+  {\Ruzicka\textcolor{DartmouthGreen}{\large\bfseries #1}}%
+  \enspace{\color{DartmouthGreen}\thickhrulefill}
+  \par\vspace{5pt}}
+  
+\newcommand{\subheadings}[1]{%
+	\Needspace{6\baselineskip}
+	\par\medskip\noindent
+	{\Ruzicka\textcolor{DartmouthGreen}{\large\textit{#1}}}%
+	\par\vspace{5pt}}
+
+\newcommand{\thickhrulefill}[1][0.5pt]{\leavevmode\leaders\hrule height #1\hfill\kern0pt}
+
+
+% TABLE ITEMS
+\newcommand{\education}[6]{%
+#1 &	\makecell[{{p{\hsize}}}]{
+		\textbf{#4}\\
+		#2, #3\\
+		%\ifblank{#5}{}{Thesis: #5\\}
+		Advisor(s): #6
+		}\\
+}
+\newcommand{\professional}[2]{%
+\multicolumn{2}{@{}p{\textwidth}@{}}{\textbf{#1}, #2}\\
+}
+\newcommand{\stint}[3]{%
+	#1 & \makecell[{{p{\hsize}}}]{
+			#2\\
+			%{\small\textit{#3}}
+			}\\
+}
+\newcommand{\publication}[8]{%
+	#1 & #2\ifblank{#3}{}{ (#3).} #4.%
+	\ifblank{#5}{}{ \textit{#5}}%
+	\ifblank{#6}{}{\ifblank{#5}{ }{, }\href{#6}{#7}}%
+	\ifblank{#5#6}{}{.}%
+	\ifblank{#8}{}{\newline\textit{#8}}\\[4pt]
+}
+\newcommand{\conference}[7]{%
+	#2 & #3 (#1, #2). \textit{#4} [#5]. #6, #7.\\
+}
+\newcommand{\invitedtalk}[5]{%
+	#2 & \textit{#3}, #4, #5.\\
+}
+\newcommand{\course}[6]{%
+	#1 & \makecell[{{p{\hsize}}}]{
+			\textbf{#2}: #4 (#5, #3)\\
+			%{\small{\textit{#6}}}
+			}\\
+}
+\newcommand{\fieldwork}[4]{%
+	#1 & \makecell[{{p{\hsize}}}]{ 
+			#2 [#3]\\
+			{\small{\textit{#4}}}
+			}\\
+}
+\newcommand{\professionalactivity}[2]{%
+	#1 & #2 \\
+}
+\newcommand{\service}[3]{%
+	#1 & #2, #3 \\
+}
+\newcommand{\award}[2]{%
+	#1 & #2 \\
+}
+
+% TABLE COLUMNS
+\newcolumntype{D}{>{\arraybackslash}p{0.05\textwidth}}
+\newcolumntype{L}{>{\arraybackslash}p{0.14\textwidth}}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+
+% Ensures that the first page doesn't have the header...
+\thispagestyle{empty}
+\directlua{M.renderBio()}
+\directlua{M.renderSection("education")}
+\directlua{M.renderSection("publications")}
+\enlargethispage{2\baselineskip}
+\directlua{M.renderSection("conferences")}
+\directlua{M.renderSection("invited")}
+\directlua{M.renderSection("awards")}
+\directlua{M.renderSection("fieldwork")}
+\directlua{M.renderSection("teaching")}
+\directlua{M.renderSection("professional")}
+\directlua{M.renderSection("professionalActivities")}
+\directlua{M.renderSection("service")}
+
+\end{document}

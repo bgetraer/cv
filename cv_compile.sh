@@ -10,6 +10,15 @@ lualatex --output-directory=$OUTPUT_DIR --jobname=$OUTPUT_NAME $INPUT_FILE > out
 lualatex --output-directory=$OUTPUT_DIR --jobname=$OUTPUT_NAME $INPUT_FILE > output/cv_compile.log
 echo " Done"
 
+# Compile short CV pdf
+OUTPUT_DIR="./output/latex"
+OUTPUT_NAME="short_cv_bgetraer"
+INPUT_FILE="src/short_cv_template.tex"
+mkdir -p $OUTPUT_DIR
+echo -n "Compiling short cv in lualatex..."
+lualatex --output-directory=$OUTPUT_DIR --jobname=$OUTPUT_NAME $INPUT_FILE > output/short_cv_compile.log
+lualatex --output-directory=$OUTPUT_DIR --jobname=$OUTPUT_NAME $INPUT_FILE > output/short_cv_compile.log
+echo " Done"
 
 # Compile CV HTML
 OUTPUT_DIR="./output/html"

@@ -38,18 +38,18 @@
 				{
 					"state": "in preparation",
 					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
-					"year": "20xx",
+					"year": "",
 					"title": "Thwaites Glacier insensitive to inter-annual to decadal ocean forcing variability in coupled ice--ocean projection",
-					"journal": "Annals of Glaciology",
+					"journal": "",
 					"link": "",
 					"linkText": ""
 				},
 				{
 					"state": "in preparation",
 					"authors": ["Getraer, B.", "Goldberg, D.", "Nakayama, Y.", "Seroussi, H.", "Morlighem, M."],
-					"year": "20xx",
+					"year": "",
 					"title": "Dynamics of basal channel persistence beneath a warm cavity ice shelf in a coupled ice--ocean model",
-					"journal": "Geophysical Research Letters",
+					"journal": "",
 					"link": "",
 					"linkText": ""
 				},
@@ -106,6 +106,7 @@
 					"location": "Vienna, Austria"
 				},
 				{
+					"long_only": true,
 					"month": "March",
 					"year": "2026",
 					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
@@ -119,7 +120,7 @@
 					"year": "2025",
 					"authors": ["Getraer, B.", "Goldberg, D.", "Nakayama, Y.", "Morlighem, M."],
 					"title": "Thwaites’ retreat insensitive to interannual to decadal ocean variability",
-					"type": "poster presentation",
+					"type": "poster",
 					"conference_name": "AGU Fall Meeting",
 					"location": "New Orleans, LA"
 				},
@@ -128,16 +129,17 @@
 					"year": "2025",
 					"authors": ["Getraer, B."],
 					"title": "Thwaites’ melt rate may not depend on emissions scenario",
-					"type": "poster presentation",
+					"type": "poster",
 					"conference_name": "KITP: The Future of Earth’s Polar Regions",
 					"location": "Santa Barbara, CA"
 				},
 				{
+					"long_only": true,
 					"month": "April",
 					"year": "2025",
 					"authors": ["Getraer, B."],
 					"title": "Ice shelf stability directly influenced by coupling of channels and shear margins",
-					"type": "poster presentation",
+					"type": "poster",
 					"conference_name": "Northeast Glaciology Meeting",
 					"location": "Ithaca, NY"
 				},
@@ -146,7 +148,7 @@
 					"year": "2024",
 					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
 					"title": "21st century coupled ice--ocean projections of the Amundsen Sea Embayment, West Antarctica",
-					"type": "poster presentation",
+					"type": "poster",
 					"conference_name": "AGU Fall Meeting",
 					"location": "Washington D.C"
 				},
@@ -155,16 +157,17 @@
 					"year": "2024",
 					"authors": ["Getraer, B.",  "Morlighem, M."],
 					"title": "Impact of assumptions for Glen’s flow law exponent: 30\\% greater Amundsen Sea Embayment ice loss by 2100 if $n = 4$",
-					"type": "poster presentation",
+					"type": "poster",
 					"conference_name": "IGS International Symposium on Verification and Validation of Cryospheric Models",
 					"location": "Newcastle, UK"
 				},
 				{
+					"long_only": true,
 					"month": "April",
 					"year": "2024",
 					"authors": ["Getraer, B.",  "Morlighem, M."],
 					"title": "Pre-satellite era record of basal channels shows possible channel capture in Pine Island Bay",
-					"type": "poster presentation",
+					"type": "poster",
 					"conference_name": "Northeast Glaciology Meeting",
 					"location": "Cambridge, MA"
 				},
@@ -205,11 +208,15 @@
 			"data": [
 				{
 					"date": "2026",
+					"description": "Gary B. Malone 1970 Memorial Award for graduate student engagement"
+				},
+				{
+					"date": "2026",
 					"description": "Best Oral Presentation, Northeast Glaciology Meeting"
 				},
 				{
 					"date": "2019", 
-					"description": "Department Book Award for outstanding research ability and clear writing in the senior thesis"
+					"description": "Department Book Award for outstanding senior thesis"
 				},
 				{
 					"date": "2019",
@@ -227,7 +234,7 @@
 					"periods": [
 						{
 							"date": "2019 -- 2021",
-							"location": "White Mountain National Forest, NH",
+							"location": "White Mountain National Forest, Randolph, NH",
 							"description": "Fall/winter seasonal; staffed and maintained off-grid public facility in sub-alpine environment in the White Mountain National Forest; volunteer search and rescue; recorded daily weather and snowpack observations."
 						}
 					]
@@ -258,15 +265,16 @@
 					"date": "2026",
 					"location": "Summit Station, Greenland Ice Sheet, Greenland",
 					"length": "1 week",
-					"description": "Maintaining a network of GNSS sensors at satellite ground control points for laser altimetry calibration."
+					"description": "Topographic surveying and maintaining a GNSS sensor network."
 				},
 				{
 					"date": "2024",
-					"location": "San Juan Range, Colorado, USA",
+					"location": "Irving Formation, San Juan Range, Colorado, USA",
 					"length": "1 week",
-					"description": "Field mapping and sampling of the Paleoproterozoic Irving Formation, southeastern Needle Mountains."
+					"description": "Field mapping and sampling, southeastern Needle Mountains."
 				},
 				{
+					"long_only": true,
 					"date": "2023",
 					"location": "Canadian and American Rockies, Canada and USA",
 					"length": "4 weeks",
@@ -274,29 +282,33 @@
 				},
 				{
 					"date": "2022",
-					"location": "Nunavut, Canada",
+					"location": "Rocknest Formation, Nunavut, Canada",
 					"length": "6 weeks",
-					"description": "Section measuring and sampling of the Paleoproterozoic stromatolitic carbonate platform of the Rocknest Formation."
+					"description": "Section measuring and sampling of a Paleoproterozoic carbonate platform."
 				},
 				{
+					"long_only": true,
 					"date": "2018",
 					"location": "Shark Bay, Australia",
 					"length": "1.5 weeks",
 					"description": "Quantified depth and orientation patterns of modern stromatolite reefs."
 				},
 				{
+					"long_only": true,
 					"date": "2017",
 					"location": "Juneau Icefield, Alaska, USA, and British Columbia, Canada",
 					"length": "8 weeks",
 					"description": "Student, Juneau Icefield Research Program; worked on glacier mass balance surveying and comparison of gravimetric reanalysis data. Additional field work in glacial ecology, physics, and isotope chemistry."
 				},
 				{
+					"long_only": true,
 					"date": "2017",
 					"location": "Spirit Mountain Batholith, Nevada, USA, and Long Valley Caldera, California, USA",
 					"length": "1 week",
 					"description": "Tested hypotheses of formation history using XRF chemical composition and grain size distributions."
 				},
 				{
+					"long_only": true,
 					"date": "2016",
 					"location": "Colorado Plateau, Utah, USA",
 					"length": "1 week",
@@ -309,7 +321,7 @@
 			"heading": "Teaching",
 			"data": [
 				{
-					"date": "Winter, 2025",
+					"date": "2025",
 					"course_number": "EARS 070/170",
 					"school": "Dartmouth College",
 					"course_title": "Glaciology",
@@ -317,15 +329,15 @@
 					"description": "Introduction to glaciology at undergraduate (070) and graduate (170) level, including guest lecture on glacial geology."
 				},
 				{
-					"date": "Fall, 2023",
+					"date": "2023",
 					"course_number": "EARS 045/046/047",
 					"school": "Dartmouth College",
-					"course_title": "The Stretch",
+					"course_title": "Field Methods in Earth Science",
 					"role": "teaching assistant",
 					"description": "Off-campus field program, covering glaciology on the Columbia Icefield, Alberta, and structural geology and Earth history in the Sawtooth Range, Montana, and Bighorn Basin, Wyoming."
 				},
 				{
-					"date": "Spring, 2023",
+					"date": "2023",
 					"course_number": "WRI 120",
 					"school": "Princeton University",
 					"course_title": "Ages of Memory",
@@ -343,7 +355,7 @@
 					"description": "AGU Advances, The Cryosphere, Geophysical Research Letters, Journal of Glaciology"
 				},
 				{
-					"role": "Organizing committee & session convener",
+					"role": "Organizing committee",
 					"description": "IGS International Symposium on Artificial Intelligence in Glaciology, Dartmouth College, Hanover, NH (September, 2026)"
 				},
 				{
@@ -352,7 +364,7 @@
 				},
 				{
 					"role": "Attendee",
-					"description": "Hokkaido Summer Institute on Cryospheric Modelling, Hokkaido University, Sapporo, Japan (2024)"
+					"description": "Summer Institute on Cryospheric Modelling, Hokkaido University, Sapporo, Japan (2024)"
 				}
 			]
 
@@ -377,16 +389,19 @@
 					"organization": "GOLD-UE (graduate student union)"
 				},
 				{
+					"long_only": true,
 					"date": "2024 -- 2025",
 					"role": "Tea time co-chair",
 					"organization": "EAPS department, Dartmouth College"
 				},
 				{
+					"long_only": true,
 					"date": "2024 -- 2025",
 					"role": "Graduate Resident Fellow",
 					"organization": "Office of Residential Life, Dartmouth College"
 				},
 				{
+					"long_only": true,
 					"date": "2024",
 					"role": "Mentor (graduate school application process)",
 					"organization": "SACNAS at Dartmouth"

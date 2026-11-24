@@ -96,8 +96,7 @@ M.loadJSON(\datafile)
 % TABLE ITEMS
 \newcommand{\education}[6]{%
 #1 &	\makecell[{{p{\hsize}}}]{
-		#2, #3\\
-		\textbf{#4}\\
+		\textbf{#4}, #2, #3\\
 		\ifblank{#5}{}{Thesis: #5\\}
 		Advisor(s): #6
 		}\\
@@ -149,6 +148,7 @@ M.loadJSON(\datafile)
 % TABLE COLUMNS
 \newcommand{\gutterSpacing}{0.25\textwidth}
 \newcolumntype{D}{>{\arraybackslash}p{\gutterSpacing}}
+\newcolumntype{L}{>{\arraybackslash}p{\gutterSpacing}}
 \renewcommand{\arraystretch}{1.5}
 
 \begin{document}
