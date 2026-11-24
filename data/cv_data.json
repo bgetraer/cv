@@ -1,0 +1,403 @@
+{
+	"bio": {
+		"name": "Benjamin Getraer",
+		"department": "Department of Earth and Planetary Sciences",
+		"institution": "Dartmouth College",
+		"address":"6105 Fairchild Hall, Hanover, NH 03755",
+		"email": "benjamin.p.getraer.gr@dartmouth.edu",
+		"website_link": "https://bgetraer.github.io/",
+		"website_text": "bgetraer.github.io/"
+	},
+	"sections": [
+		{
+			"id": "education",
+			"heading": "Education",
+			"data": [
+				{
+					"date": "2022 -- present",
+					"institution": "Dartmouth College",
+					"location": "Hanover, NH",
+					"degree": "Ph.D., Earth and Planetary Sciences (expected June 2027)",
+					"thesis": "",
+					"advisor": "Mathieu Morlighem"
+				},
+				{
+					"date": "2019",
+					"institution": "Princeton University",
+					"location": "Princeton, NJ",
+					"degree": "A.B., Geosciences",
+					"thesis": "Comparison of GRACE derived Greenland mass wasting to near surface temperature from MERRA-2 reanalysis",
+					"advisor": "Laure Resplandy and Frederik J. Simons"
+				}
+			]
+		},
+		{
+			"id": "publications",
+			"heading": "Publications",
+			"data": [
+				{
+					"state": "in preparation",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
+					"year": "20xx",
+					"title": "Thwaites Glacier insensitive to inter-annual to decadal ocean forcing variability in coupled ice--ocean projection",
+					"journal": "Annals of Glaciology",
+					"link": "",
+					"linkText": ""
+				},
+				{
+					"state": "in preparation",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Nakayama, Y.", "Seroussi, H.", "Morlighem, M."],
+					"year": "20xx",
+					"title": "Dynamics of basal channel persistence beneath a warm cavity ice shelf in a coupled ice--ocean model",
+					"journal": "Geophysical Research Letters",
+					"link": "",
+					"linkText": ""
+				},
+				{
+					"state": "in submission",
+					"authors": ["Morlighem, M.", "Bandyopadhyay, D.", "Cheng, G.", "Filter, M.", "Krishna, M.", "Lai, C.", "Shao, N.", "Shionalyn, K.", "Yang, D.", "Cairns, G.", "Cherblanc, C.", "Getraer, B.", "Faruque, O.", "Freer, B.", "Heimbach, P.", "Kande, J.", "Linkas, L.", "Liu, Y.", "Maciel-Seidman, M.", "Maffezzoli, N.", "Meyer, C.", "Middleton, R.", "Mishra, S.", "Morgan, A.", "Prasad, A.", "Ryan, J.", "Seroussi, H."],
+					"year": "20xx",
+					"title": "Artificial intelligence in glaciology: Applications, frontiers, and a path forward",
+					"journal": "Annals of Glaciology",
+					"link": "",
+					"linkText": ""
+				},
+				{
+					"state": "in review",
+					"authors": ["Goldberg, D.", "Getraer, B.", "De Rydt, J.", "Naughten, K.", "Morlighem, M.", "Gudmundsson, G. H."],
+					"year": "20xx",
+					"title": "Limited effects of climate scenario on ocean-driven 21st century ice loss from the Amundsen Embayment",
+					"journal": "Geophysical Research Letters",
+					"link": "",
+					"linkText": ""
+				},
+				{
+					"state": "published or in press",
+					"authors": ["Getraer, B.", "Morlighem, M."],
+					"year": "2025",
+					"title": "Increasing the Glen--Nye power-law exponent accelerates ice-loss projections for the Amundsen Sea Embayment, West Antarctica",
+					"journal": "Geophysical Research Letters",
+					"link": "https://doi.org/10.1029/2024GL112516",
+					"linkText": "10.1029/2024GL112516",
+					"note": "Selected for Editors' Highlight, April 2025"
+				}
+			]
+		},
+		{
+			"id": "conferences",
+			"heading" : "Conference Proceedings",
+			"data": [
+				{
+					"month": "July",
+					"year": "2026",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Nakayama, Y.", "Seroussi, H.", "Morlighem, M."],
+					"title": "What Controls Basal Channel Persistence?",
+					"type": "oral presentation",
+					"conference_name": "IGS International Symposium on Interactions of Ice Sheets and Glaciers with the Ocean",
+					"location": "La Jolla, CA"
+				},
+				{
+					"month": "May",
+					"year": "2026",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
+					"title": "Is coupled ice--ocean modeling needed to improve projections of Thwaites Glacier? Comparison with uncoupled parameterizations and previous studies",
+					"type": "oral presentation",
+					"conference_name": "EGU General Assembly",
+					"location": "Vienna, Austria"
+				},
+				{
+					"month": "March",
+					"year": "2026",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
+					"title": "Is coupled ice--ocean modeling needed to improve projections of Thwaites Glacier?",
+					"type": "oral presentation",
+					"conference_name": "Northeast Glaciology Meeting",
+					"location": "Buffalo, NY"
+				},
+				{
+					"month": "December",
+					"year": "2025",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Nakayama, Y.", "Morlighem, M."],
+					"title": "Thwaites’ retreat insensitive to interannual to decadal ocean variability",
+					"type": "poster presentation",
+					"conference_name": "AGU Fall Meeting",
+					"location": "New Orleans, LA"
+				},
+				{
+					"month": "June",
+					"year": "2025",
+					"authors": ["Getraer, B."],
+					"title": "Thwaites’ melt rate may not depend on emissions scenario",
+					"type": "poster presentation",
+					"conference_name": "KITP: The Future of Earth’s Polar Regions",
+					"location": "Santa Barbara, CA"
+				},
+				{
+					"month": "April",
+					"year": "2025",
+					"authors": ["Getraer, B."],
+					"title": "Ice shelf stability directly influenced by coupling of channels and shear margins",
+					"type": "poster presentation",
+					"conference_name": "Northeast Glaciology Meeting",
+					"location": "Ithaca, NY"
+				},
+				{
+					"month": "December",
+					"year": "2024",
+					"authors": ["Getraer, B.", "Goldberg, D.", "Morlighem, M."],
+					"title": "21st century coupled ice--ocean projections of the Amundsen Sea Embayment, West Antarctica",
+					"type": "poster presentation",
+					"conference_name": "AGU Fall Meeting",
+					"location": "Washington D.C"
+				},
+				{
+					"month": "August",
+					"year": "2024",
+					"authors": ["Getraer, B.",  "Morlighem, M."],
+					"title": "Impact of assumptions for Glen’s flow law exponent: 30\\% greater Amundsen Sea Embayment ice loss by 2100 if $n = 4$",
+					"type": "poster presentation",
+					"conference_name": "IGS International Symposium on Verification and Validation of Cryospheric Models",
+					"location": "Newcastle, UK"
+				},
+				{
+					"month": "April",
+					"year": "2024",
+					"authors": ["Getraer, B.",  "Morlighem, M."],
+					"title": "Pre-satellite era record of basal channels shows possible channel capture in Pine Island Bay",
+					"type": "poster presentation",
+					"conference_name": "Northeast Glaciology Meeting",
+					"location": "Cambridge, MA"
+				},
+				{
+					"month": "December",
+					"year": "2023",
+					"authors": ["Getraer, B.", "Seroussi, H.", "Goldberg, D.", "Menemenlis, D.", "Morlighem, M."],
+					"title": "Initiation of basal melt channels underneath ice shelves using a coupled ice--ocean model",
+					"type": "oral presentation",
+					"conference_name": "AGU Fall Meeting",
+					"location": "San Francisco, CA"
+				}
+			]
+		},
+		{
+			"id": "invited",
+			"heading": "Invited Talks",
+			"data": [
+				{
+					"month": "September",
+					"year": "2025",
+					"title": "The consequences of $n=4$",
+					"event": "Ice+Climate Seminar, Dartmouth College",
+					"location": "Hanover, NH"
+				},
+				{
+					"month": "May",
+					"year": "2024",
+					"title": "Pacing of retreat in the Amundsen Sea Embayment, West Antarctica",
+					"event": "Glaciology Lunch, University of Washington",
+					"location": "Seattle, WA"
+				}
+			]
+		},
+		{
+			"id": "awards",
+			"heading": "Awards and Honors",
+			"data": [
+				{
+					"date": "2026",
+					"description": "Best Oral Presentation, Northeast Glaciology Meeting"
+				},
+				{
+					"date": "2019", 
+					"description": "Department Book Award for outstanding research ability and clear writing in the senior thesis"
+				},
+				{
+					"date": "2019",
+					"description": "Nomination to the Princeton chapter of the Sigma Xi honor society"
+				}
+			]
+		},
+		{
+			"id": "professional",
+			"heading": "Professional Experience",
+			"data": [
+				{
+					"role": "Camps Caretaker",
+					"institution": "Randolph Mountain Club",
+					"periods": [
+						{
+							"date": "2019 -- 2021",
+							"location": "White Mountain National Forest, NH",
+							"description": "Fall/winter seasonal; staffed and maintained off-grid public facility in sub-alpine environment in the White Mountain National Forest; volunteer search and rescue; recorded daily weather and snowpack observations."
+						}
+					]
+				},
+				{
+					"role": "Wilderness Ranger",
+					"institution": "United States Forest Service",
+					"periods": [
+						{
+							"date": "2020",
+							"location": "San Juan National Forest, Bayfield, CO",
+							"description": "Summer seasonal; patrolled and cleared trails in the Weminuche Wilderness and Hermosa Creek Wilderness."
+						},
+						{
+							"date": "2019",
+							"location": "Salmon--Challis National Forest, Challis, ID",
+							"description": "Summer seasonal; operated remote guard stations and whitewater river launch sites on the Frank Church--River of No Return Wilderness."
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "fieldwork",
+			"heading": "Field Experience",
+			"data": [
+				{
+					"date": "2026",
+					"location": "Summit Station, Greenland Ice Sheet, Greenland",
+					"length": "1 week",
+					"description": "Maintaining a network of GNSS sensors at satellite ground control points for laser altimetry calibration."
+				},
+				{
+					"date": "2024",
+					"location": "San Juan Range, Colorado, USA",
+					"length": "1 week",
+					"description": "Field mapping and sampling of the Paleoproterozoic Irving Formation, southeastern Needle Mountains."
+				},
+				{
+					"date": "2023",
+					"location": "Canadian and American Rockies, Canada and USA",
+					"length": "4 weeks",
+					"description": "TA instructor for Dartmouth College undergraduate field course; Athabasca Glacier, Alberta, Canada (glaciology); Sun River Canyon, Montana (structural mapping and stratigraphy); Bighorn Basin, Wyoming (structural mapping and stratigraphy)."
+				},
+				{
+					"date": "2022",
+					"location": "Nunavut, Canada",
+					"length": "6 weeks",
+					"description": "Section measuring and sampling of the Paleoproterozoic stromatolitic carbonate platform of the Rocknest Formation."
+				},
+				{
+					"date": "2018",
+					"location": "Shark Bay, Australia",
+					"length": "1.5 weeks",
+					"description": "Quantified depth and orientation patterns of modern stromatolite reefs."
+				},
+				{
+					"date": "2017",
+					"location": "Juneau Icefield, Alaska, USA, and British Columbia, Canada",
+					"length": "8 weeks",
+					"description": "Student, Juneau Icefield Research Program; worked on glacier mass balance surveying and comparison of gravimetric reanalysis data. Additional field work in glacial ecology, physics, and isotope chemistry."
+				},
+				{
+					"date": "2017",
+					"location": "Spirit Mountain Batholith, Nevada, USA, and Long Valley Caldera, California, USA",
+					"length": "1 week",
+					"description": "Tested hypotheses of formation history using XRF chemical composition and grain size distributions."
+				},
+				{
+					"date": "2016",
+					"location": "Colorado Plateau, Utah, USA",
+					"length": "1 week",
+					"description": "Field observations of modern climate change at multiple field sites in riparian, desert, and alpine environments."
+				}
+			]
+		},
+		{
+			"id": "teaching",
+			"heading": "Teaching",
+			"data": [
+				{
+					"date": "Winter, 2025",
+					"course_number": "EARS 070/170",
+					"school": "Dartmouth College",
+					"course_title": "Glaciology",
+					"role": "teaching assistant",
+					"description": "Introduction to glaciology at undergraduate (070) and graduate (170) level, including guest lecture on glacial geology."
+				},
+				{
+					"date": "Fall, 2023",
+					"course_number": "EARS 045/046/047",
+					"school": "Dartmouth College",
+					"course_title": "The Stretch",
+					"role": "teaching assistant",
+					"description": "Off-campus field program, covering glaciology on the Columbia Icefield, Alberta, and structural geology and Earth history in the Sawtooth Range, Montana, and Bighorn Basin, Wyoming."
+				},
+				{
+					"date": "Spring, 2023",
+					"course_number": "WRI 120",
+					"school": "Princeton University",
+					"course_title": "Ages of Memory",
+					"role": "guest lecturer",
+					"description": "Guest lecturer for a freshman year writing course, presenting an introduction to glaciers and ice sheets and leading a discussion of their relationship to Earth history and memory."
+				}
+			]
+		},
+		{
+			"id": "professionalActivities",
+			"heading": "Professional Activities",
+			"data": [
+				{
+					"role": "Reviewer",
+					"description": "AGU Advances, The Cryosphere, Geophysical Research Letters, Journal of Glaciology"
+				},
+				{
+					"role": "Organizing committee & session convener",
+					"description": "IGS International Symposium on Artificial Intelligence in Glaciology, Dartmouth College, Hanover, NH (September, 2026)"
+				},
+				{
+					"role": "Attendee",
+					"description": "International Summer School in Glaciology, McCarthy, AK (2026)"
+				},
+				{
+					"role": "Attendee",
+					"description": "Hokkaido Summer Institute on Cryospheric Modelling, Hokkaido University, Sapporo, Japan (2024)"
+				}
+			]
+
+		},
+		{
+			"id": "service",
+			"heading": "University and Professional Service",
+			"data": [
+				{
+					"date": "2026 -- present",
+					"role": "Seminar convener",
+					"organization": "Ice+Climate Seminar, Dartmouth College"
+				},
+				{
+					"date": "2025 -- 2026",
+					"role": "IDE committee member",
+					"organization": "EAPS department, Dartmouth College"
+				},
+				{
+					"date": "2024 -- 2025",
+					"role": "Trustee",
+					"organization": "GOLD-UE (graduate student union)"
+				},
+				{
+					"date": "2024 -- 2025",
+					"role": "Tea time co-chair",
+					"organization": "EAPS department, Dartmouth College"
+				},
+				{
+					"date": "2024 -- 2025",
+					"role": "Graduate Resident Fellow",
+					"organization": "Office of Residential Life, Dartmouth College"
+				},
+				{
+					"date": "2024",
+					"role": "Mentor (graduate school application process)",
+					"organization": "SACNAS at Dartmouth"
+				},
+				{
+					"date": "2023 -- 2024",
+					"role": "Graduate–faculty representative",
+					"organization": "EAPS department, Dartmouth College"
+				}
+			]
+		}
+	]
+}
+

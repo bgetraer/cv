@@ -1,0 +1,42 @@
+CV for Benjamin Getraer
+
+Contents:
+README				this file
+cv_data.json		all CV content (the single source for both outputs)
+cv_template.tex	PDF layout: packages, fonts, macros for each entry type
+cv_parser.lua		reads the json and prints each section as LaTeX macros within a table
+cv_compile.sh		bash script for compiling the PDF
+cv_html.lua			reads the json and prints the web page version
+cv.css				associated website styles
+output/				compiled PDF and LaTeX build files
+
+Overview:
+cv_data.json holds the bio and every section. To change the CV, edit only this file. cv_template.tex loads cv_parser.lua and calls M.renderSection("id") for each section, in the order they should appear on the page. The parser sends each entry to a LaTeX macro of the same kind (\education, \publication, \conference, ...), and the macro sets the layout. cv_html.lua reads the same json and writes the web version as one <div class="cv"> fragment, which is inserted into the website's layout. Its styles are in cv.css.
+
+Requirements:
+LuaLaTeX and texlua (both included in TeX Live, along with lualibs)
+Fonts in ../fonts/ (NOTE: Dartmouth fonts are not under permissive license and are not included)
+
+To build the PDF:
+$ ./cv_compile.sh
+Writes output/cv_bgetraer.pdf. Run lualatex twice to keep page numbering correct.
+
+To build the web version:
+$ texlua cv_html.lua cv_data.json > cv_fragment.html
+
+Copy cv.css to the site's css/ folder. The site's build.sh does both steps.
+
+To test the parser alone (prints the LaTeX to the terminal):
+$ luatex cv_parser.lua cv_data.json
+
+Editing cv_data.json:
+- Add an entry: copy an existing item in the section's "data" list and change the fields.
+- Authors are arrays, one name per entry, as "Last, I.": ["Getraer, B.", "Morlighem, M."]. "and" is added automatically, your name is bolded, and lists longer than 6 are shortened to "..., et al.". Change the 6 in cv_parser.lua (sprintAuthors) and cv_html.lua (authors) to change the cutoff.
+- Publications are grouped by "state", which must be exactly one of: in preparation, in submission, in review, published or in press. An entry with any other state is not printed.
+- Type "--" for an en dash and "~" for a non-breaking space. In titles, $...$ is math, and "%" must be written "\\%".
+
+Adding a section:
+1. Add the section to cv_data.json with a unique "id", a "heading", and a "data" list.
+2. Add a macro for one entry to cv_template.tex.
+3. Add a branch for the id in M.renderSection in cv_parser.lua, and in cv_html.lua.
+4. Add M.renderSection("id") to cv_template.tex where it should appear in the PDF. On the web, sections follow the order in cv_data.json.
